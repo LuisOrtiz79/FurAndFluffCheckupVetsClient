@@ -1,0 +1,302 @@
+/* App and body style */
+.App {
+    background-color: LightCyan;
+    margin: 0;
+    min-height: 98vh;
+    min-width: 98vw;
+}
+
+body {
+    margin: 0;
+    min-height: 98vh;
+    min-width: 98vw;
+}
+
+/*navbar style */
+.navbar {
+    background:LightSeaGreen;
+    z-index: 999;
+    width: 100%;
+    border-bottom: 1px solid black;
+    position: relative;
+    padding: 0;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 5vw;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.navbar li {
+    margin-right: 15px;
+    float: left;
+	position:relative;
+}
+
+.navbar li:last-child{
+	margin: 0;
+}
+
+.navbar li a {
+    color: #2C2D3F;
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: capitalize;
+    text-decoration: none;
+	padding: 25px 12px;
+	position: relative;
+	display: inline-block;
+	position: relative;
+}
+
+.navbar li a::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width:0%;
+	background: FireBrick;
+	border-radius: 5px 5px 0 0;
+	opacity:0;
+	visibility: hidden;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.navbar li.active a:before{
+	opacity: 1;
+	visibility: visible;
+	width: 100%;
+}
+
+.navbar li.active a{
+	color: FireBrick;
+}
+
+.navbar li:hover a:before{
+	opacity: 1;
+	width: 100%;
+	visibility: visible;
+}
+
+.navbar li:hover a{
+	color: FireBrick;
+}
+
+.navbar li a i {
+	display: inline-block;
+	margin-left: 1px;
+	font-size: 13px;
+}
+
+/* homepage style */
+.homePage,
+.detailsPage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.homeLogo {
+    width: 35vw;
+    height: 30vh;
+}
+
+/*aboutPage style */
+.aboutPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.aboutText {
+    width: 50vw;
+}
+
+.aboutLogo{
+    width: 30vw;
+    height: 30vh;
+}
+
+.facebookLogo,
+.twitterLogo {
+    height: 20px; 
+    width: 20px;
+}
+
+.instagramLogo {
+    height: 15px; 
+    width: 15px;
+}
+
+/*apptsPage style */
+.app {
+    min-height: 98vh;
+    min-width: 98vw;
+}
+.appt-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.apptPage {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*sidebar style */
+.sidebar {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 300px;
+	min-height: 98vh;
+	background: SkyBlue;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.sidebar h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+}
+
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sidebar li a {
+	display: block;
+	padding: 1em 1em 1em 1.2em;
+	outline: none;
+	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
+	color: black;
+	text-transform: uppercase;
+    text-decoration: none;
+	text-shadow: 0 0 1px rgba(255,255,255,0.1);
+	letter-spacing: 1px;
+	font-weight: 400;
+}
+
+.sidebar  li:first-child a {
+	box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
+}
+
+.sidebar  li a:hover {
+	background: rgba(0,0,0,0.2);
+	box-shadow: inset 0 -1px rgba(0,0,0,0);
+	color: #fff;
+}
+
+/* addPage, updatePage, deletePage style */
+.updatePage,
+.addPage,
+.deletePage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    padding: 0 16px;
+    width: 30vw;
+}
+
+.card button {
+    width: 50%;
+}
+
+/* button style */
+.buttons{
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 10%;
+}
+
+#buttons1 {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    width: 75%;
+}
+
+.buttons:after {
+  background-clip: padding-box;
+  background-color: FireBrick;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.buttons:main,
+.buttons:focus {
+  user-select: auto;
+}
+
+.buttons:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.buttons:disabled {
+  cursor: auto;
+}
+
+.buttons:active {
+  border-width: 4px 0 0;
+  background: none;
+}
