@@ -21,6 +21,7 @@ const AddAppt = () => {
     setNewAppt((prev) => ({...prev, [e.target.name]: e.target.value}))
   }
 
+  /* It put on the json server the new information added by the user */
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -29,7 +30,6 @@ const AddAppt = () => {
         name: newAppt.name,
         specie: newAppt.specie,
         gender: newAppt.gender,
-        time: newAppt.time,
         date: newAppt.date,
         phone: newAppt.phone,
         email: newAppt.email,
@@ -42,7 +42,6 @@ const AddAppt = () => {
           name: "",
           specie: "",
           gender: "",
-          time: "",
           date: "",
           phone: "",
           email: "",
@@ -83,11 +82,8 @@ const AddAppt = () => {
           </label>
 
           <label>
-            Time:
-            <input name='time' type='text' placeholder='Time' value={newAppt.time} onChange={handleTextInput} />
-
-            Date:
-            <input name='date' type='text' placeholder='mm/dd/yy' value={newAppt.date} onChange={handleTextInput} />
+            Date & Time:
+            <input name='date' type='text' placeholder='mm/dd/yy, time' value={newAppt.date} onChange={handleTextInput} />
           </label>
 
           <label>

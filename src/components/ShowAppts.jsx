@@ -6,6 +6,7 @@ import { API_URL } from '../API_URL';
 const ShowAppts = () => {
   const [showAppt, setShowAppt] = useState();
 
+  /* Gets the information that correspond with the id */
   const getAllAppts = () => {
     axios
       .get(API_URL + '/appointment/')
@@ -27,7 +28,7 @@ const ShowAppts = () => {
                   <div className='sticky-note'>
                     <h2>{appt.name}</h2>
                     <p>{appt.appointment}</p>
-                    <p>{appt.time} {appt.date}</p>
+                    <p>{appt.date}</p>
                   </div>
                 </Link> 
               </div>

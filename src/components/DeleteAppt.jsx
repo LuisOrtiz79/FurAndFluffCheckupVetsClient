@@ -5,6 +5,7 @@ import { API_URL } from '../API_URL';
 const DeleteAppt = () => {
   const [showAppt, setShowAppt] = useState([]);
 
+  /* Gets the information that correspond with the id */
   const getAllAppts = () => {
     axios
       .get(API_URL + '/appointment/')
@@ -16,6 +17,7 @@ const DeleteAppt = () => {
     getAllAppts();
   }, [] );
 
+  /* Based on the id it deletes the information from the json server */
   const handleDelete = (apptId) => {
     setShowAppt((prevAppts) => prevAppts.filter((appt) => appt.id !== apptId));
     axios

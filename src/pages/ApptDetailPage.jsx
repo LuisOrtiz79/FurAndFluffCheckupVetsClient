@@ -28,7 +28,7 @@ const ApptDetailPage = () => {
             <h1>{appt.name}</h1>
             <p>Specie: {appt.specie}</p>
             <p>Gender: {appt.gender}</p>
-            <p>Time: {appt.time} Date: {appt.date}</p>
+            <p> Date & Time: {appt.date}</p>
             <p>Phone: {appt.phone}</p>
             <p>Email: {appt.email}</p>
             <p>Appointment: {appt.appointment}</p>
