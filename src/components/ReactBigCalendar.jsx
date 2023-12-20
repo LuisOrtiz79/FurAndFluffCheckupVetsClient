@@ -17,7 +17,7 @@ const ReactBigCalendar = () => {
       .get(API_URL + '/appointment/')
       .then((response) => {
         const appts = response.data.map((appt) => ({
-          title: appt.name + ' ' + appt.appointment,
+          title: appt.appointment + ' - ' + appt.name,
           start: new Date(appt.date),
           end: new Date(appt.date),
           name: appt.name,

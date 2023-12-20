@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { API_URL } from '../API_URL';
 
 const UpdateAppt = () => {
   const [showAppt, setShowAppt] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
+  const navigate = useNavigate();
   const [editedAppt, setEditedAppt] = useState({
     name: "",
     specie: "",
@@ -63,6 +65,7 @@ const UpdateAppt = () => {
       })
       .then((response) => {
         console.log("Updated appointment ===>", response.data);
+        navigate('/');
       })
       .catch((error) => console.log(error));
       
@@ -103,19 +106,19 @@ const UpdateAppt = () => {
             Specie
             <select name='specie' value={editedAppt.specie} onChange={handleTextInput} >
               <option value=''>-- None --</option>
-              <option value='dog'>Dog</option>
-              <option value='cat'>Cat</option>
-              <option value='bird'>Bird</option>
-              <option value='horse'>Horse</option>
-              <option value='reptile'>Reptile</option>
-              <option value='hamster'>Hamster</option>
+              <option value='Dog'>Dog</option>
+              <option value='Cat'>Cat</option>
+              <option value='Bird'>Bird</option>
+              <option value='Horse'>Horse</option>
+              <option value='Reptile'>Reptile</option>
+              <option value='Hamster'>Hamster</option>
             </select>
 
             Gender:
             <select name='gender' value={editedAppt.gender} onChange={handleTextInput} >
               <option value=''>-- None --</option>
-              <option value='male'>Male</option>
-              <option value='female'>Female</option>
+              <option value='Male'>Male</option>
+              <option value='Female'>Female</option>
             </select>
           </label>
 
@@ -138,8 +141,8 @@ const UpdateAppt = () => {
             Appointment
             <select name='appointment' value={editedAppt.appointment} onChange={handleTextInput} >
               <option value=''>-- None --</option>
-              <option value='checkup'>Checkup</option>
-              <option value='care'>Care</option>
+              <option value='Checkup'>Checkup</option>
+              <option value='Care'>Care</option>
             </select>
           </label>
       

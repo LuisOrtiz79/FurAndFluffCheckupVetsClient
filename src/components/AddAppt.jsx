@@ -65,19 +65,19 @@ const AddAppt = () => {
             Specie:
             <select name='specie' value={newAppt.specie} onChange={handleTextInput} >
               <option value=''>-- None --</option>
-              <option value='dog'>Dog</option>
-              <option value='cat'>Cat</option>
-              <option value='bird'>Bird</option>
-              <option value='horse'>Horse</option>
-              <option value='reptile'>Reptile</option>
-              <option value='hamster'>Hamster</option>
+              <option value='Dog'>Dog</option>
+              <option value='Cat'>Cat</option>
+              <option value='Bird'>Bird</option>
+              <option value='Horse'>Horse</option>
+              <option value='Reptile'>Reptile</option>
+              <option value='Hamster'>Hamster</option>
             </select>
 
             Gender:
             <select name='gender' value={newAppt.gender} onChange={handleTextInput} >
               <option value=''>-- None --</option>
-              <option value='male'>Male</option>
-              <option value='female'>Female</option>
+              <option value='Male'>Male</option>
+              <option value='Female'>Female</option>
             </select>
           </label>
 
@@ -100,8 +100,8 @@ const AddAppt = () => {
             Appointment:
             <select name='appointment' value={newAppt.appointment} onChange={handleTextInput} >
               <option value=''>-- None --</option>
-              <option value='checkup'>Checkup</option>
-              <option value='care'>Care</option>
+              <option value='Checkup'>Checkup</option>
+              <option value='Care'>Care</option>
             </select>
           </label>
 
